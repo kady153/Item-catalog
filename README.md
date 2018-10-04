@@ -50,8 +50,9 @@ Access the application by visiting [http://localhost:8080](http://localhost:8080
 
 ## JSON Endpoints
 
-`/items/JSON` - Displays all items with it's details.
-`/item/<int:id>/JSON` -Displays one item by it's id .
+`/items/JSON` : Displays all items with it's details.
+
+`/item/<int:id>/JSON` : Displays one item by it's id .
 
 
 ## License
