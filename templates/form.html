@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="stylesheet" href=/static/css/form.css>
+</head>
+<body>
+{% if key=="new" %}
+<h2>create new item</h2>
+{% elif key=="edit"%}
+<h2>edit item</h2>
+{% endif %}  
+<div class="container">
+  <form method=post enctype=multipart/form-data>
+    <div class="row">
+      <div class="col-25">
+        <label >Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" placeholder=" Name.." name="name" size="30" maxlength="40" required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label >Description</label>
+      </div>
+      <div class="col-75">
+        <textarea rows="15" cols="70" name=description maxlength="1500" placeholder="Description.." required></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Category</label>
+      </div>
+      <div class="col-75">
+        <select  name="category">
+          <option>Football</option>
+          <option>Basketball</option>
+          <option>Baseball</option>
+          <option>Frisbee</option>
+          <option>Snowboarding</option>
+          <option>Rock Climbing</option>
+          <option>Skating</option>
+          <option>Hockey</option>
+          <option>Swimming</option>
+          <option>Soccer</option>
+          <option>other</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Image (optional)</label>
+      </div>
+      <div class="col-75">
+        <input type=file name=file accept="image/*">
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+      <input type="button" value="Cancel" onclick="window.location.href='{{url_for('Hello')}}'">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
