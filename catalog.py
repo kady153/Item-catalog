@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 # Google client_id
 CLIENT_ID = json.loads(
-	open('client_secrets.json', 'r').read())['web']['client_id']
+    open('client_secrets.json', 'r').read())['web']['client_id']
 
 # Connect to database
 engine = create_engine('sqlite:///item.db')
@@ -63,7 +63,7 @@ def getUserID(email):
     try:
         user = session.query(User).filter_by(email=email).one()
         return user.id
-    except:
+    except:  # noqa: E722
         return None
 
 
