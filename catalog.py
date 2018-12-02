@@ -325,7 +325,7 @@ def itemJSON(id):
 
 # send details of all items in json format
 @app.route('/items/JSON')
-def itemJSON():
+def itemJSON1():
     engine = create_engine('sqlite:///item.db')
     Base.metadata.bind = engine
 
